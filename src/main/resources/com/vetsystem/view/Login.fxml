@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vetsystem.controller.LoginController"
+      alignment="CENTER" spacing="15"
+      style="-fx-background-color: #f0f4f8;">
+
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+
+    <Label text="VetSystem" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+    <Label text="Sistema de Gestión Veterinaria" style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;"/>
+
+    <TextField fx:id="txtUsuario" promptText="Usuario" maxWidth="250"
+               style="-fx-background-radius: 5; -fx-padding: 8;"/>
+
+    <PasswordField fx:id="txtPassword" promptText="Contraseña" maxWidth="250"
+                   style="-fx-background-radius: 5; -fx-padding: 8;"/>
+
+    <Button text="Iniciar Sesión" onAction="#login" maxWidth="250"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold;
+                   -fx-background-radius: 5; -fx-padding: 8; -fx-cursor: hand;"/>
+
+    <Label fx:id="lblMensaje" style="-fx-text-fill: red;"/>
+
+</VBox>

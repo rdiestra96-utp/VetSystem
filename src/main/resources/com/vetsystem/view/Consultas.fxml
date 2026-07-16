@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vetsystem.controller.ConsultasController"
+      spacing="10" style="-fx-background-color: #f0f4f8; -fx-padding: 20;">
+
+    <Label text="Gestión de Consultas"
+           style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <!-- Formulario -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="txtMotivo" promptText="Motivo" prefWidth="150"/>
+        <TextField fx:id="txtDiagnostico" promptText="Diagnóstico" prefWidth="150"/>
+        <TextField fx:id="txtTratamiento" promptText="Tratamiento" prefWidth="150"/>
+        <TextField fx:id="txtIdPaciente" promptText="ID Paciente" prefWidth="90"/>
+        <TextField fx:id="txtIdVeterinario" promptText="ID Veterinario" prefWidth="100"/>
+    </HBox>
+
+    <!-- Botones -->
+    <HBox spacing="10">
+        <Button text="Registrar" onAction="#registrar"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button text="Limpiar" onAction="#limpiar"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <TextField fx:id="txtFiltro" promptText="Filtrar por ID paciente..." prefWidth="180"/>
+        <Button text="Filtrar" onAction="#filtrar"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Tabla -->
+    <TableView fx:id="tablaConsultas" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="40"/>
+            <TableColumn fx:id="colFecha" text="Fecha" prefWidth="100"/>
+            <TableColumn fx:id="colMotivo" text="Motivo" prefWidth="150"/>
+            <TableColumn fx:id="colDiagnostico" text="Diagnóstico" prefWidth="150"/>
+            <TableColumn fx:id="colTratamiento" text="Tratamiento" prefWidth="150"/>
+            <TableColumn fx:id="colIdPaciente" text="ID Paciente" prefWidth="90"/>
+            <TableColumn fx:id="colIdVeterinario" text="ID Veterinario" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="lblMensaje" style="-fx-text-fill: green;"/>
+
+</VBox>

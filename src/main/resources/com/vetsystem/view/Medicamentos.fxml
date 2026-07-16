@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.vetsystem.controller.MedicamentosController"
+      spacing="10" style="-fx-background-color: #f0f4f8; -fx-padding: 20;">
+
+    <Label text="Gestión de Medicamentos"
+           style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;"/>
+
+    <!-- Formulario -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <TextField fx:id="txtNombre" promptText="Nombre" prefWidth="150"/>
+        <TextField fx:id="txtDosis" promptText="Dosis" prefWidth="150"/>
+        <TextField fx:id="txtStock" promptText="Stock" prefWidth="80"/>
+    </HBox>
+
+    <!-- Botones -->
+    <HBox spacing="10">
+        <Button text="Agregar" onAction="#agregar"
+                style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button text="Actualizar" onAction="#actualizar"
+                style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button text="Eliminar" onAction="#eliminar"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <Button text="Limpiar" onAction="#limpiar"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+        <TextField fx:id="txtFiltro" promptText="Buscar medicamento..." prefWidth="180"/>
+        <Button text="Buscar" onAction="#buscar"
+                style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;"/>
+    </HBox>
+
+    <!-- Tabla -->
+    <TableView fx:id="tablaMedicamentos" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="colDosis" text="Dosis" prefWidth="200"/>
+            <TableColumn fx:id="colStock" text="Stock" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="lblMensaje" style="-fx-text-fill: green;"/>
+
+</VBox>
