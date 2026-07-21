@@ -60,9 +60,9 @@ Usa estas credenciales de prueba:
 
 | Usuario | Contraseña | Rol |
 |---|---|---|
-| admin | 1234 | Administrador |
-| drjuan | 1234 | Veterinario |
-| recep01 | 1234 | Recepcionista |
+| admin | **** | Administrador |
+| drjuan | **** | Veterinario |
+| recep01 | **** | Recepcionista |
 
 ---
 
